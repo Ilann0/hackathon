@@ -135,7 +135,14 @@ window.onload = () => {
 						zIndex: 5,
 						map: this.map,
 					});
-				}
+				} else if (feature.geometry.type === 'LineString')
+					shape = new google.maps.Marker({
+						paths: feature.geometry.coordinates.map(coo => ({ lng: coo[0], lat: coo[1] })),
+						editable: true,
+						draggable: true,
+						zIndex: 5,
+						map: this.map,
+					});
 
 				this.featureList.push(shape);
 			});
