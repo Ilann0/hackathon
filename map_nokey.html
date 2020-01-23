@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./map.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="map"></div>
+		<button>Submit</button><button>Put</button><button>Turn On Delete</button><button>Turn off</button>
+		<ul>
+			<li>Submit -> console logs the geojson object (you can copy it from there)</li>
+			<li>
+				Put -> You have to draw something first using the tools at the top of the map and then they will be
+				displayed as would be the base geojson
+			</li>
+			<li>Turn on/off delete -> select the hand grab thingy and click on an editable polygon to delete it</li>
+		</ul>
+		You should be able to start making plans of parks with this until I get there :)
+		<script src="./map.js"></script>
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=drawing"
+			type="text/javascript"
+		></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</body>
+</html>

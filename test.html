@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="map" style="width: 300px; height: 300px;"></div>
+		<script type="text/javascript">
+			$(function() {
+				$('#map').googleMap({
+					zoom: 10, // Initial zoom level (optional)
+					coords: [48.895651, 2.290569], // Map center (optional)
+					type: 'ROADMAP', // Map type (optional)
+				});
+			});
+		</script>
+		<script src="javascripts/jquery.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC03hwJ5LsvZZJzxk6PoxQFR0tEgQ0vPJ0"></script>
+		<script src="javascripts/jquery.googlemap.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
+
+<!-- {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#d1f56b",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#000000",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              34.7638937830925,
+              32.06651956393348
+            ],
+            [
+              34.76496398448944,
+              32.065783112031966
+            ],
+            [
+              34.765076637268066,
+              32.06575583592173
+            ],
+            [
+              34.76524829864502,
+              32.0657922040669
+            ],
+            [
+              34.765366315841675,
+              32.065839937235495
+            ],
+            [
+              34.76578742265701,
+              32.0661377007248
+            ],
+            [
+              34.7663453221321,
+              32.066603664544935
+            ],
+            [
+              34.76467698812485,
+              32.06747421497957
+            ],
+            [
+              34.76433098316192,
+              32.06710599361377
+            ],
+            [
+              34.7639662027359,
+              32.06664457832797
+            ],
+            [
+              34.7638937830925,
+              32.06651956393348
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+} -->
