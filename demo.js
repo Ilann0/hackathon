@@ -188,11 +188,32 @@ window.onload = () => {
 			});
 			this.featureList = [];
 		},
+
+		setEditableTrue: function() {
+			this.featureList.forEach(feature => {
+				feature.setDraggable(true);
+				if (feature.setEditable) feature.setEditable(true);
+			});
+		},
+
+		setEditableFalse: function() {
+			this.featureList.forEach(feature => {
+				feature.setDraggable(false);
+				if (feature.setEditable) feature.setEditable(false);
+			});
+		},
 	};
 
 	document.getElementsByTagName('button')[0].addEventListener('click', () => {
 		maps.removePlanFromDisplay();
 		maps.displayPlan(plan2);
+	});
+
+	document.getElementsByTagName('button')[1].addEventListener('click', () => {
+		maps.setEditableTrue();
+	});
+	document.getElementsByTagName('button')[2].addEventListener('click', () => {
+		maps.setEditableFalse();
 	});
 
 	maps.initMap();
